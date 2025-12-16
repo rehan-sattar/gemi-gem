@@ -2,6 +2,7 @@
   "name": "gemi-gem",
   "version": "1.0.0",
   "description": "This project contains the coding examples of the gemini sdk. ",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rehan-sattar/gemi-gem/issues"
   },
-  "homepage": "https://github.com/rehan-sattar/gemi-gem#readme"
+  "homepage": "https://github.com/rehan-sattar/gemi-gem#readme",
+  "dependencies": {
+    "@google/genai": "^1.33.0"
+  }
 }
