@@ -24,8 +24,18 @@ const main = async () => {
     const response = await genAI.models.generateContent({
       model: "gemini-2.5-flash",
       contents: "Explain how AI works in 10 words",
+      config: {
+        // This is the system instruction for the model
+        temperature: 0.5, // how much diverse and creative the model should respond, range: [0.0, 2.0
+        systemInstruction:
+          "You are a helpful assistant that explains how AI works in 10 words",
+        thinkingConfig: {
+          includeThoughts: true, // This is the configuration for the thoughts
+        },
+      },
     });
 
+    console.log("Bot: ", response.text);
     console.log(JSON.stringify(response, null, 2));
   } catch (error) {
     console.error("Error while calling Gemini API:", error?.message || error);
